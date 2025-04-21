@@ -60,4 +60,9 @@ public class Serie extends Titulo{
     public void setMinutosPorEps(int minutosPorEps) {
         this.minutosPorEps = minutosPorEps;
     }
+
+    @Override
+    public String toString() {
+        return "Serie " + this.getNome();
+    }
 }

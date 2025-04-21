@@ -1,6 +1,6 @@
 package br.com.paulo.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     protected String nome;
     protected int anoDeLancamento;
     protected boolean incluidoNoPlano;
@@ -81,6 +81,12 @@ public class Titulo {
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+
+    @Override
+    public int compareTo(Titulo outro) {
+        return this.getNome().compareTo(outro.getNome());
     }
 }
 
